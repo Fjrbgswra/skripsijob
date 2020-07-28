@@ -1,0 +1,68 @@
+CREATE TABLE IF NOT EXISTS `data_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `data_kriteria` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kode` varchar(10) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `atribut` varchar(20) NOT NULL,
+  `bobot` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE IF NOT EXISTS `data_alternatif` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) NOT NULL,
+  `c1` varchar(50) NOT NULL,
+  `c2` varchar(50) NOT NULL,
+  `c3` varchar(50) NOT NULL,
+  `c4` varchar(50) NOT NULL,
+  `c5` varchar(50) NOT NULL,
+  `c6` varchar(50) NOT NULL,
+  `c7` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `output_moora` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) NOT NULL,
+  `output` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+
+INSERT INTO data_kriteria (kode, nama, atribut, bobot) VALUES
+    ('C1', 'Usia Panen', 'Benefit', '25'),
+    ('C2', 'Rata-Rata Hasil', 'Benefit', '25'),
+    ('C3', 'Potensi Hasil', 'Benefit', '25'),
+    ('C4', 'Berat 1000 biji', 'Benefit', '25'),
+    ('C5', 'Ketahanan Penyakit', 'Benefit', '25'),
+    ('C6', 'Baik di Dataran Rendah', 'Benefit', '25'),
+    ('C7', 'Baik di Dataran Tinggi', 'Benefit', '25');
+
+
+
+INSERT INTO data_alternatif (nama, c1, c2, c3, c4, c5, c6, c7) VALUES
+    ('Metro', '110', '3.2', '4.5', '260', 'Kurang', 'Baik', 'Baik'),
+    ('Baster Kuning', '130', '3.3', '4.6', '330', 'Kurang', 'Kurang', 'Baik'),
+    ('Kania Putih', '150', '3.3', '4.6', '470', 'Kurang', 'Baik', 'Baik'),
+    ('Malin', '100', '3', '4.2', '250', 'Kurang', 'Baik', 'Baik'),
+    ('Harapan', '105', '3.3', '5.4', '340', 'Kurang', 'Baik', 'Baik'),
+    ('Wiyasa', '96', '5.3', '7', '291', 'Cukup', 'Baik', 'Kurang'),
+    ('Kalingga', '96', '5.4', '7', '302', 'Cukup', 'Baik', 'Baik'),
+    ('Bayu', '87', '4', '6', '271', 'Cukup', 'Baik', 'Baik'),
+    ('Antasena', '100', '5', '6', '275', 'Cukup', 'Baik', 'Baik'),
+    ('Wisanggeni', '90', '5.25', '8', '285', 'Cukup', 'Baik', 'Baik');
+
+
+
